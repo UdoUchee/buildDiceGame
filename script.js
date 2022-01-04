@@ -20,6 +20,7 @@ const resetBtnEl = document.getElementById("resetBtn")
 rollBtnEl.addEventListener("click", function () {
   const randomNumber = Math.floor(Math.random() * 6) + 1
   console.log(randomNumber)
+
   
 // 4. Find out which players turn it is
 // 5. log out the value e.g. "Player 1 rolled 5" > //  console.log("Player-1 rolled " + randomNumber)
@@ -42,21 +43,38 @@ rollBtnEl.addEventListener("click", function () {
 
   if (player1Score >= 20){
     messageEl.textContent = "Player 1 has won! ​🥳​" // 12. Check if a player has won. If so, change the message to "Player X has won!"
-    return reset()
+    return showDisplayButton()
   } else if (player2Score >= 20) {
     messageEl.textContent = "Player 2 has won! ​🤩​"
-    return reset()
+    return showDisplayButton()
   }
 
   player1Turn = !player1Turn // 6. Switch the turn back to the other player > ! = opposite of the value to the left of the "!"
 })
 
 
-function reset(){
+function showDisplayButton(){
   rollBtnEl.style.display = "none" // 13. Hide the Roll Dice Button and show the Reset Button. Hint: use display none/block
   resetBtnEl.style.display = "block"
 }
 
+
+resetBtnEl.addEventListener("click", function reset(){
+  player1Score = 0
+  player2Score = 0
+  player1ScoreboardEl.textContent = 0
+  player2ScoreboardEl.textContent = 0
+  player1DiceEl.textContent = "-"
+  player2DiceEl.textContent = "-"
+  messageEl.textContent = "Player 1 Turn"
+  resetBtnEl.style.display = "none"
+  rollBtnEl.style.display = "block"
+  console.log("reset game")
+})
+
+// 14. Hook a click event listener up with the Reset Button
+// 15. Create a reset() function that resets the game
+// 16. Invoke the reset() function when the Reset Button is clicked
 
 
 

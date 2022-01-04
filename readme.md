@@ -24,6 +24,9 @@
 1. Display the scores in their scoreboards
 1. Check if a player has won. If so, change the message to "Player X has won!"
 1. Hide the Roll Dice Button and show the Reset Button. Hint: use display none/block
+1. Hook a click event listener up with the Reset Button
+1. Create a reset() function that resets the game
+1. Invoke the reset() function when the Reset Button is clicked
 
 
 
