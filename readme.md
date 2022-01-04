@@ -44,3 +44,6 @@ IDE
 ## Credits
 [Per Harald Borgen](https://scrimba.com/allcourses)
 
+## To DO
+  - Change dice rolled to show image of dice not number
+  - Make the game fair "each player must have equal roll, and the closer to 20 wins"
