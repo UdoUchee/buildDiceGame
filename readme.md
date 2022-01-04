@@ -22,6 +22,8 @@
 1. Update the "message" DOM node so that it states who's turn it is
 1. Update the scores for each player
 1. Display the scores in their scoreboards
+1. Check if a player has won. If so, change the message to "Player X has won!"
+1. Hide the Roll Dice Button and show the Reset Button. Hint: use display none/block
 
 
 
