@@ -59,22 +59,24 @@ function showDisplayButton(){
 }
 
 
+// 14. Hook a click event listener up with the Reset Button
+// 15. Create a reset() function that resets the game
+// 16. Invoke the reset() function when the Reset Button is clicked
 resetBtnEl.addEventListener("click", function reset(){
+  messageEl.textContent = "Player 1 Turn"
   player1Score = 0
   player2Score = 0
+  player1Turn = true
   player1ScoreboardEl.textContent = 0
   player2ScoreboardEl.textContent = 0
   player1DiceEl.textContent = "-"
   player2DiceEl.textContent = "-"
-  messageEl.textContent = "Player 1 Turn"
   resetBtnEl.style.display = "none"
   rollBtnEl.style.display = "block"
-  console.log("reset game")
+  player2Dice.classList.remove("active")
+  player1Dice.classList.add("active")
 })
 
-// 14. Hook a click event listener up with the Reset Button
-// 15. Create a reset() function that resets the game
-// 16. Invoke the reset() function when the Reset Button is clicked
 
 
 
